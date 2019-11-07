@@ -1,0 +1,25 @@
+{
+  "name": "hash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit 'test/**/*spec.js'",
+    "dev": "nodemon ./src/server/index.js",
+    "start": "node ./src/server/index.js",
+    "doc": "apidoc -f ./src/server/routes/index.js -o ./src/server/apidoc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "0.17.7",
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.3",
+    "mocha": "6.2.1",
+    "chai": "4.2.0",
+    "nock": "^11.4.0",
+    "chai-http": "4.3.0"
+  }
+}

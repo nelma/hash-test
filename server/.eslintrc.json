@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "no-console": 0
+  },
+  "plugins": ["jest", "react", "prettier"],
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.3"
+    }
+  }
+}
