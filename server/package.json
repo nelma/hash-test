@@ -7,7 +7,7 @@
     "test": "mocha --exit 'test/**/*spec.js'",
     "dev": "nodemon ./src/index.js",
     "start": "node ./src/server/index.js",
-    "doc": "apidoc -f ./src/server/routes/index.js -o ./src/server/apidoc"
+    "doc": "apidoc -f ./src/routes/index.js -o ./src/apidoc"
   },
   "author": "",
   "license": "ISC",

@@ -31,5 +31,8 @@ update-check/
 # End of https://www.gitignore.io/api/node
 project.sublime-workspace
 
-#
+#launch vscode
 .vscode
+
+#apidoc
+/src/apidoc
