@@ -1,0 +1,7 @@
+{
+  "name": "apidoc-example",
+  "version": "0.0.1",
+  "description": "Api Node/Express que utiliza ApiDoc.js",
+  "url": "http://localhost:3000/apidoc",
+  "title": "ApiDoc Example"
+}
