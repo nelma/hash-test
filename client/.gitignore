@@ -38,3 +38,5 @@ update-check/
 
 # Output of 'npm pack'
 *.tgz
+
+client/dist/
