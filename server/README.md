@@ -8,12 +8,12 @@
 
 ## Index
 
-- [Instalar dependências](#install)
-- [Executar projeto](#run-project)
-- [Executar testes](#run-test)
-- [Gerando doc](#generate-doc)
+-   [Instalar dependências](#install)
+-   [Executar projeto](#run-project)
+-   [Executar testes](#run-test)
+-   [Gerando doc](#generate-doc)
 
-## <a name="run-project"></a>Instalar dependências
+## <a name="#install">Instalar dependências</a>
 
 Para download das dependências
 
@@ -21,7 +21,7 @@ Para download das dependências
 npm i
 ```
 
-## <a name="run-project"></a>Executar projeto
+## <a name="run-project">Executar projeto</a>
 
 Aplicação irá subir na porta 3000
 
@@ -37,7 +37,7 @@ Executar com perfil de desenvolvimento:
 npm run dev
 ```
 
-## <a name="run-test"></a>Executar testes
+## <a name="run-test">Executar testes</a>
 
 Esta aplição contém testes unitários
 
@@ -45,7 +45,7 @@ Esta aplição contém testes unitários
 npm run test
 ```
 
-## <a name="generate-doc"></a>Gerando doc
+## <a name="generate-doc">Gerando doc</a>
 
 ```shell
 npm run doc

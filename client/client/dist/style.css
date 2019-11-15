@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Source Sans Pro Regular";
+  src: url(/fonts/SourceSansPro-Regular.otf); }
+
+@font-face {
+  font-family: "Source Sans Pro Bold Italico";
+  src: url(/fonts/SourceSansPro-BoldIt.otf); }
+
+@font-face {
+  font-family: "Source Sans Pro Italico";
+  src: url(/fonts/SourceSansPro-It.otf); }
+
+body,
+html {
+  background: #f2f2f2;
+  height: 100%;
+  display: grid; }
+
+div {
+  background: #ffffff;
+  border: 1px solid #d1dce3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  width: 608px;
+  height: 389px;
+  margin: auto; }
+  div section:first-child {
+    width: 377px;
+    padding: 40px 56px; }
+  div section:last-child {
+    background: rgba(209, 220, 227, 0.18);
+    border-radius: 4px;
+    padding: 83px 30px 0 35px; }
+  div section h1 {
+    font-family: "Source Sans Pro Regular";
+    font-size: 20px;
+    line-height: 30px;
+    color: #656565; }
+  div section h3 {
+    font-family: "Source Sans Pro Bold Italico";
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #3d75bb;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    border-bottom: 1px solid #5d9cec;
+    width: 178px; }
+  div section label {
+    display: block;
+    font-family: "Source Sans Pro Regular";
+    font-size: 14px;
+    line-height: 18px;
+    color: #656565;
+    margin-bottom: 26px; }
+    div section label input {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #dde6e9;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 251px;
+      height: 37px; }
+    div section label small {
+      font-family: "Source Sans Pro Regular";
+      font-size: 11px;
+      line-height: 14px;
+      /* identical to box height */
+      color: #cecece; }
+  div section ul {
+    list-style: none;
+    min-width: 142px;
+    padding: 0; }
+    div section ul li {
+      font-family: "Source Sans Pro Italico";
+      font-size: 16px;
+      line-height: 46px;
+      /* or 287% */
+      color: #5d9cec; }
+

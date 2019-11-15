@@ -1,0 +1,113 @@
+$gray: #656565;
+$font16: 16px;
+$fontSourceProRegular: 'Source Sans Pro Regular';
+$fontSourceProBoldIt: 'Source Sans Pro Bold Italico';
+$fontSourceProIt: 'Source Sans Pro Italico';
+
+@font-face {
+	font-family: $fontSourceProRegular;
+	src: url(../fonts/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+	font-family: $fontSourceProBoldIt;
+	src: url(../fonts/SourceSansPro-BoldIt.otf);
+}
+
+@font-face {
+	font-family: $fontSourceProIt;
+	src: url(../fonts/SourceSansPro-It.otf);
+}
+
+body,
+html {
+	background: #f2f2f2;
+	height: 100%;
+	display: grid;
+}
+
+div {
+	background: #ffffff;
+	border: 1px solid #d1dce3;
+	box-sizing: border-box;
+	border-radius: 4px;
+	display: flex;
+	width: 608px;
+	height: 389px;
+	margin: auto;
+
+	section {
+		&:first-child {
+			width: 377px;
+			padding: 40px 56px;
+		}
+
+		&:last-child {
+			background: rgba(209, 220, 227, 0.18);
+			border-radius: 4px;
+			padding: 83px 30px 0 35px;
+		}
+
+		h1 {
+			font-family: $fontSourceProRegular;
+			font-size: 20px;
+			line-height: 30px;
+			color: $gray;
+		}
+
+		h3 {
+			font-family: $fontSourceProBoldIt;
+			font-size: $font16;
+			line-height: 20px;
+			text-transform: uppercase;
+			color: #3d75bb;
+			mix-blend-mode: normal;
+			opacity: 0.3;
+			border-bottom: 1px solid #5d9cec;
+			width: 178px;
+		}
+
+		label {
+			display: block;
+			font-family: $fontSourceProRegular;
+			font-size: 14px;
+			line-height: 18px;
+			color: $gray;
+			margin-bottom: 26px;
+
+			input {
+				display: block;
+				background: #ffffff;
+				border: 1px solid #dde6e9;
+				box-sizing: border-box;
+				border-radius: 4px;
+				width: 251px;
+				height: 37px;
+			}
+
+			small {
+				font-family: $fontSourceProRegular;
+				font-size: 11px;
+				line-height: 14px;
+				/* identical to box height */
+
+				color: #cecece;
+			}
+		}
+
+		ul {
+			list-style: none;
+			min-width: 142px;
+			padding: 0;
+
+			li {
+				font-family: $fontSourceProIt;
+				font-size: $font16;
+				line-height: 46px;
+				/* or 287% */
+
+				color: #5d9cec;
+			}
+		}
+	}
+}
