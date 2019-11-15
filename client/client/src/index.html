@@ -15,7 +15,7 @@
 
 						<label>
 							Em quantas parcelas*
-							<input id="installmentValue" type="number" />
+							<input id="installmentValue" type="number" min="0" max="12" />
 							<small>Máximo de 12 parcelas</small>
 						</label>
 
@@ -28,9 +28,9 @@
 					<h3>VOCÊ RECEBERÁ:</h3>
 					<ul>
 						<li>Amanhã: <strong id="tomorrow">R$ 0,00</strong></li>
-						<li>Em 15 dias: <strong id="days-15">R$ 0,00</strong></li>
-						<li>Em 30 dias: <strong id="days-30">R$ 0,00</strong></li>
-						<li>Em 90 dias: <strong id="days-90">R$ 0,00</strong></li>
+						<li>Em 15 dias: <strong id="in15Days">R$ 0,00</strong></li>
+						<li>Em 30 dias: <strong id="in30Days">R$ 0,00</strong></li>
+						<li>Em 90 dias: <strong id="in90Days">R$ 0,00</strong></li>
 					</ul>
 				</section>
 			</div>

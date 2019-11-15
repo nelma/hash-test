@@ -2,11 +2,13 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-// const MinifyPlugin = require('babel-minify-webpack-plugin');
+// const MinifyPlugin = require('uglifyjs-webpack-plugin');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
+
+console.log(process.env.NODE_ENV);
 
 const webpackCommon = {
 	output: {
@@ -70,33 +72,21 @@ const webpackCommon = {
 const webpackDev = {
 	mode: 'development',
 	entry: {
-		home: ['./client/src/js/index.js'],
-		style: ['./client/src/sass/style.scss']
+		home: ['./client/src/js/index.js', './client/src/sass/style.scss']
 	},
 	plugins: [new webpack.HotModuleReplacementPlugin()]
 };
 
 const webpackProd = {
 	mode: 'production',
-	entry: ['./client/src/index.html']
-	// optimization: {
-	// 	minimizer: [new MinifyPlugin(), new OptimizeCSSAssetsPlugin()]
-	// },
-	// module: {
-	// 	rules: [
-	// 		{
-	// 			test: /\.js$/,
-	// 			exclude: /node_modules/,
-	// 			use: {
-	// 				loader: 'babel-loader',
-	// 				options: {
-	// 					presets: ['@babel/preset-env'],
-	// 					plugins: ['@babel/plugin-proposal-class-properties']
-	// 				}
-	// 			}
-	// 		}
-	// 	]
-	// }
+	entry: [
+		'./client/src/index.html',
+		'./client/src/js/index.js',
+		'./client/src/sass/style.scss'
+	],
+	optimization: {
+		minimizer: [new OptimizeCSSAssetsPlugin()]
+	}
 };
 
 let webpackConfig;

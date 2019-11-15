@@ -4,11 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node ./server/src/index.js",
-		"start-sudo": "PORT=80 node ./server/src/index.js",
+		"start": "NODE_ENV=production node ./server/src/index.js",
+		"start-sudo": "NODE_ENV=development PORT=80 node ./server/src/index.js",
 		"test": "jest",
-		"dev": "export NODE_ENV=development && webpack --mode=development --progress && npm run server",
-		"build": "export NODE_ENV=production && webpack --mode=production --progress",
+		"dev": "webpack --mode=development --progress && npm run server",
+		"build": "webpack --mode=production --progress",
 		"server": "nodemon --watch ./server/src --inspect=0.0.0.0:3001 ./server/src/index.js --exec 'npm run inspect'",
 		"inspect": "kill-port --port 3001 && node --inspect=0.0.0.0:3001 server/src/index.js"
 	},

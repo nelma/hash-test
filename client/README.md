@@ -32,7 +32,7 @@ npm start
 Executar com perfil de desenvolvimento:
 
 ```shell
-npm run dev
+NODE_ENV=development npm run dev
 ```
 
 Se você quiser rodar na porta 80, irá precisar rodar como `sudo`:

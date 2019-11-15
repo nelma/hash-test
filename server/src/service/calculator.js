@@ -1,15 +1,11 @@
-const validationCalculator = require('../validation/validationCalculator');
+const ValidationCalculator = require('../validation/validationCalculator');
 
 class CalculatorService {
 	calc(body) {
 		const grossValue = body.grossValue;
 		const installments = body.installments;
 		const MDR = body.MDR;
-		const calc = validationCalculator.validation(
-			grossValue,
-			installments,
-			MDR
-		);
+		const calc = ValidationCalculator.validation(grossValue, installments, MDR);
 
 		if (calc.violations.length > 0) {
 			return calc;
@@ -31,26 +27,10 @@ class CalculatorService {
 
 		//TODO: rever cálculo 90 dias
 		return {
-			tomorrow: this.calcTomorrow(
-				installmentNetValue,
-				installments,
-				percentMDR
-			),
-			in15Days: this.calc15Days(
-				installmentNetValue,
-				installments,
-				percentMDR
-			),
-			in30Days: this.calc30Days(
-				installmentNetValue,
-				installments,
-				percentMDR
-			),
-			in90Days: this.calc90Days(
-				installmentNetValue,
-				installments,
-				percentMDR
-			)
+			tomorrow: this.calcTomorrow(installmentNetValue, installments, percentMDR),
+			in15Days: this.calc15Days(installmentNetValue, installments, percentMDR),
+			in30Days: this.calc30Days(installmentNetValue, installments, percentMDR),
+			in90Days: this.calc90Days(installmentNetValue, installments, percentMDR)
 		};
 	}
 
