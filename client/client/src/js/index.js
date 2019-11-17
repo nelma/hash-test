@@ -1,6 +1,4 @@
-const listNamesReceivable = require('./listNamesReceivables');
 const validation = require('./validation');
-const internalAPI = require('./internalAPI');
 
 let dataValues = {};
 
@@ -15,7 +13,7 @@ const moneyMask = event => {
 	}
 
 	dataValues['grossValue'] = value;
-	validation(dataValues, internalAPI, updateValueNamesReceivable);
+	validation(dataValues);
 
 	if (value.indexOf('R$') === -1) {
 		event.target.value = `R$ ${value}`;
@@ -29,16 +27,7 @@ const updateData = (event, type) => {
 	updateDataValues[type] = event.target.value;
 	dataValues = updateDataValues;
 
-	validation(dataValues, internalAPI, updateValueNamesReceivable);
-};
-
-const updateValueNamesReceivable = res => {
-	listNamesReceivable.forEach(name => {
-		document.getElementById(name).textContent = new Intl.NumberFormat('pt-BR', {
-			style: 'currency',
-			currency: 'BRL'
-		}).format(res.data.result[name]);
-	});
+	validation(dataValues);
 };
 
 (() => {

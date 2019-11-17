@@ -1,4 +1,7 @@
-module.exports = (dataValues, callback, callbackSuccess) => {
+const updateValueNamesReceivable = require('./updateValueNamesReceivable');
+const internalAPI = require('./internalAPI');
+
+module.exports = dataValues => {
 	if (Object.keys(dataValues).length === 3) {
 		if (dataValues['grossValue'].match(/[R$ /t]/g)) {
 			let updateDataValues = { ...dataValues };
@@ -10,6 +13,6 @@ module.exports = (dataValues, callback, callbackSuccess) => {
 
 			dataValues = updateDataValues;
 		}
-		callback(dataValues, 'POST', callbackSuccess);
+		internalAPI(dataValues, 'POST', updateValueNamesReceivable);
 	}
 };

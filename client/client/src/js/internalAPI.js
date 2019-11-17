@@ -8,7 +8,7 @@ module.exports = (data, method, success) => {
 		data
 	})
 		.then(res => {
-			success(res);
+			success(res.data.result);
 		})
 		.catch(err => {
 			console.log(err);
