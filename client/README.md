@@ -35,12 +35,6 @@ Executar com perfil de desenvolvimento:
 NODE_ENV=development npm run dev
 ```
 
-Se você quiser rodar na porta 80, irá precisar rodar como `sudo`:
-
-```shell
-sudo npm start-sudo
-```
-
 ## <a name="build-project">Buildar projeto</a>
 
 Gerando `/dist`
@@ -51,7 +45,7 @@ npm run build
 
 ## <a name="run-test">Executar testes</a>
 
-Esta aplição contém testes unitários com `enzyme` e `jest`
+Esta aplição contém testes unitários com `jest`
 
 ```shell
 npm run test
