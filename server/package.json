@@ -6,20 +6,20 @@
   "scripts": {
     "test": "mocha --exit 'test/**/*spec.js'",
     "dev": "nodemon ./src/index.js",
-    "start": "node ./src/server/index.js",
+    "start": "node ./src/index.js",
     "doc": "apidoc -f ./src/routes/index.js -o ./src/apidoc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apidoc": "0.17.7",
-    "express": "4.17.1"
+    "apidoc": "^0.24.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "1.19.3",
-    "mocha": "6.2.1",
-    "chai": "4.2.0",
-    "nock": "^11.4.0",
-    "chai-http": "4.3.0"
+    "nodemon": "^2.0.4",
+    "mocha": "^8.1.0",
+    "chai": "^4.2.0",
+    "nock": "^13.0.3",
+    "chai-http": "^4.3.0"
   }
 }
